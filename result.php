@@ -1,9 +1,9 @@
 <?php
-$age = $_POST['age'];
-$weight = $_POST['weight'];
-$height = $_POST['height'];
-$gender = $_POST['gender'];
-$activity = $_POST['activity'];
+$age = $_GET['age'];
+$weight = $_GET['weight'];
+$height = $_GET['height'];
+$gender = $_GET['gender'];
+$activity = $_GET['activity'];
 
 if ($gender == 'male') {
     $result = 66 + (13.7 * $weight) + (5 * $height) - (6.8 * $age);
