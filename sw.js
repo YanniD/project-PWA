@@ -23,7 +23,7 @@ self.addEventListener('fetch', function(event) {
         event.respondWith(cacheFirst(req));
     }
 });
-/*
+
 self.addEventListener('activate',function (event) {
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
@@ -39,7 +39,6 @@ self.addEventListener('activate',function (event) {
         })
     )
 });
-*/
 
 async function cacheFirst(req) {
     const cachedResponse = await caches.match(req);
