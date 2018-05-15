@@ -6,7 +6,7 @@ const staticAssets = [
     'css/custom.css',
     'css/materialize.css',
     '/css/materialize.min.css',
-    'index.php',
+    'index.html',
     'result.php'
 ];
 
