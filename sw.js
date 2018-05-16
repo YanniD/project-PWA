@@ -4,7 +4,6 @@ const staticAssets = [
     "manifest.json",
     "css/materialize.min.css",
     "css/custom.css",
-    "images/*",
     "js/materialize.js",
     "js/script.js",
     "js/scriptResults.js",
