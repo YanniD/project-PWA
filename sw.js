@@ -21,7 +21,7 @@ self.addEventListener('fetch', function(event) {
             return resp || fetch(event.request).then(function(response) {
                 return caches.open('tdee-static-v2').then(function(cache) {
                     cache.put(event.request, response.clone());
-                   console.log(event.request);
+                   console.log(event.request.url);
                     return response;
                 }).catch(err => console.log(err));
             }).catch(err => console.log(err));
