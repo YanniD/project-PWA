@@ -5,11 +5,6 @@ const staticAssets = [
     "manifest.json",
     "css/materialize.min.css",
     "css/custom.css",
-    "js/materialize.js",
-    "js/script.js",
-    "js/scriptResults.js",
-    "jquery-3.1.0.min.js",
-    "images/icons/favicon.ico",
 ];
 self.addEventListener('install', function(event) {
     event.waitUntil(
