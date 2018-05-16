@@ -11,6 +11,7 @@ let getData = function () {
     let activity = sessionStorage.getItem("activity");
     let resultsCalories =calculateCalories(age,height,weight,gender,activity);
     let currentResult = resultsCalories[0];
+    console.log(currentResult);
     let weekResult = currentResult * 7;
     let idealWeight = calculateIdealWeight(height,gender);
     let bmi = calculateBmi(weight,height);
@@ -50,7 +51,7 @@ let calculateCalories = function (age,height,weight,gender,activity) {
             break;
     }
     result = parseInt(result);
-    let arrayWithAllResults = [result,bmr,sedentary,light,moderate,heavy,athlete];
+    let arrayWithAllResults = [result,sedentary,light,moderate,heavy,athlete];
     return arrayWithAllResults;
 };
 
