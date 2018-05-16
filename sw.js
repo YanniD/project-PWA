@@ -13,6 +13,7 @@ const staticAssets = [
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('tdee-static-v2').then(function(cache) {
+            console.log(event);
             return cache.addAll(staticAssets);
         })
     );
@@ -23,7 +24,7 @@ self.addEventListener('fetch', function(event) {
         caches.match(event.request).then(function(resp) {
             return resp || fetch(event.request).then(function(response) {
                 return caches.open('tdee-static-v2').then(function(cache) {
-                    console.log(event);
+
                     cache.put(event.request, response.clone());
                     return response;
                 });
