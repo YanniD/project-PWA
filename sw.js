@@ -1,3 +1,4 @@
+console.log("service worker log");
 const staticAssets = [
     "index.html",
     "result.html",
@@ -13,7 +14,6 @@ const staticAssets = [
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('tdee-static-v2').then(function(cache) {
-            console.log(event);
             return cache.addAll(staticAssets);
         })
     );
