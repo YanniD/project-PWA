@@ -1,6 +1,6 @@
 
 const staticAssets = [
-    "home.html",
+    "index.html",
     "result.html",
     "manifest.json",
     "/css/materialize.min.css",
