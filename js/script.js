@@ -26,7 +26,7 @@ let calculateData = function () {
     } else {
         console.log("no support");
     }
-    location.replace("result.html")
+    location.location.href = "result.html";
 
 };
 
