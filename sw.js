@@ -1,15 +1,15 @@
 
 const staticAssets = [
-    "index.html",
-    "result.html",
-    "manifest.json",
-    "css/materialize.min.css",
-    "css/custom.css",
+    "/index.html",
+    "/result.html",
+    "/manifest.json",
+    "/css/materialize.min.css",
+    "/css/custom.css",
     "https://fonts.googleapis.com/icon?family=Material+Icons",
-    "js/jquery-3.1.0.min.js",
-    "js/materialize.min.js",
-    "js/script.js",
-    "js/scriptResults.js",
+    "/js/jquery-3.1.0.min.js",
+    "/js/materialize.min.js",
+    "/js/script.js",
+    "/js/scriptResults.js",
 ];
 self.addEventListener('install', function(event) {
     event.waitUntil(
