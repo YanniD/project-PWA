@@ -1,4 +1,4 @@
-console.log("service worker log");
+
 const staticAssets = [
     "index.html",
     "result.html",
@@ -14,8 +14,9 @@ const staticAssets = [
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('tdee-static-v2').then(function(cache) {
+            console.log("service worker install");
             return cache.addAll(staticAssets);
-        })
+        }).catch(err => console.log(err))
     );
 });
 
@@ -26,10 +27,11 @@ self.addEventListener('fetch', function(event) {
                 return caches.open('tdee-static-v2').then(function(cache) {
 
                     cache.put(event.request, response.clone());
+                    console.log("service worker fetch");
                     return response;
-                });
-            });
-        })
+                }).catch(err => console.log(err));
+            }).catch(err => console.log(err));
+        }).catch(err => console.log(err))
     );
 });
 
@@ -45,6 +47,6 @@ self.addEventListener('activate',function (event) {
 
             ))
 
-        })
+        }).catch(err => console.log(err))
     )
 });

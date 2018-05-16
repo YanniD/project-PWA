@@ -41,6 +41,4 @@ if('serviceWorker' in navigator){
     } catch(error){
         console.log("SW failed regirstraiotn");
     }
-
-
 }
