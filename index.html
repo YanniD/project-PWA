@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Form</title>
+    <meta name="author" content="Yanni Derous">
+    <meta name="description" content="TDEE calculator and more">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.ico"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="css/materialize.min.css">
@@ -14,7 +17,7 @@
 <body>
 <div class="container">
     <h1>Learn how many calories you burn every day</h1>
-    <form id="calculateForm" action="result.php" method="post">
+    <form id="calculateForm" action="result.html" onsubmit="event.preventDefault(); calculateData();">
         <div id="radio">
             <div id="genderGroup">
                 <label for="genderGroup">Gender: </label>
@@ -26,7 +29,7 @@
                 <input class=with-gap name="gender" type="radio" value="female"/>
                 <span>female</span>
             </label>
-
+            </div>
         </div>
         <div class="input-field col s6">
             <input placeholder="Age" id="age" name="age" min="1" max="110" type="number" required=required class="validate">
@@ -51,10 +54,11 @@
             <label for="activity">Activity</label>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="submit">Submit
+        <button class="btn waves-effect waves-light" type="submit" name="submit" value="submit">
             <i class="material-icons right">send</i>
         </button>
     </form>
+
 </div>
 
 

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <meta name="author" content="Yanni Derous">
+    <meta name="description" content="TDEE calculator and more">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <header>
+            <h1 class="center-align">TDEE calculator and more</h1>
+        </header>
+    </div>
+    <div class="row">
+        <h1 class="center-align">Your stats</h1>
+    </div>
+    <div class="row">
+        <div class="center-align">
+            <div id="statsInput" class="center-align box"></div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row center-align ">
+        <div class="col l4 box">
+            <h1>Your maintance calories</h1>
+            <p>
+                <span class="caloriesDay"></span>
+                <br>
+                calories per day
+            </p>
+            <hr>
+            <p>
+                <span class="caloriesWeek"></span>
+                <br>
+                calories per week
+            </p>
+        </div>
+
+        <div class="col l8">
+            <p>Based on your stats, the best estimate for your maintenance calories is
+                <span class="caloriesDay"></span> calories per day based on the Mifflin-St Jeor Formula, which is widely known
+                to be the most accurate. The table below shows the difference if you were to have selected a
+                different activity level.
+            </p>
+            <table class="highlight">
+                <tr>
+                    <td>Sedentary</td>
+                    <td class="sedentary"></td>
+                </tr>
+                <tr>
+                    <td>light</td>
+                    <td class="light_exercise"></td>
+                </tr>
+                <tr>
+                    <td>moderate</td>
+                    <td class="moderate"></td>
+                </tr>
+                <tr>
+                    <td>heavy</td>
+                    <td class="heavy"></td>
+                </tr>
+                <tr>
+                    <td>athlete</td>
+                    <td class="athlete"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col l6 center-align">
+            <h1 class="center-align">Ideal weight: <span class="idealWeight"></span></h1>
+
+            <p>
+                Your ideal body weight is estimated to be between <span class="idealWeight"></span> kg based on the various
+                formulas listed below. These formulas are based on your height and represent averages so don't take them
+                too seriously, especially if you lift weights.
+            </p>
+            <p>
+                Formula used : B.J. Devine Formula (1974) <span class="idealWeight"></span> KG
+            </p>
+        </div>
+        <div class="col l6">
+            <h1 class="center-align">BMI score : <span class="bmi"></span> </h1>
+            <p class="center-align  ">Your BMI is <span class="bmi"></span> which means you are classified as <span
+                        id="bmiCategory"></span></p>
+            <table class="centered highlight">
+                <tr class="underweight">
+                    <td>18.5 or less is Underweight</td>
+                </tr>
+                <tr class="normal">
+                    <td>18.5 - 24.99 is Normal Weight</td>
+                </tr>
+                <tr class="overweight">
+                    <td>25 - 29.99 is Overweight</td>
+                </tr>
+                <tr class="obese">
+                    <td>30+ is Obese</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l12 center-align">
+            <h1>Maximum Muscular potential <span class="maxMuscle"></span></h1>
+            How ripped could you get? According to <a
+                    href="https://leangains.com/maximum-muscular-potential-of-drug-free-athletes-updated-dec-31st/">Martin
+                Berkhan's formula</a>, your maximum muscular potential is <span class="maxMuscle"></span> kg at 5% body
+            fat.
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col s12 l12">
+            <footer class="center-align">
+                <p class="center-align">Made by yanni Derous</p>
+            </footer>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="js/materialize.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/scriptResults.js"></script>
+</body>
+</html>

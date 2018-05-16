@@ -5,12 +5,12 @@ body{
 h1{
     font-size: 2.6rem;
 }
-.caloriesBox{
+.box{
     border:1px solid #fdf6e5;;
     border-radius: 5%;
     background: #fdf6e5;;
 }
-.caloriesBox span{
+.box span{
     font-size: 2rem;
     font-weight:bold;
 }
