@@ -10,10 +10,12 @@ const staticAssets = [
     "jquery-3.1.0.min.js",
     "images/icons/favicon.ico",
 ];
-
-self.addEventListener('install',async event =>{
-    const cache = await caches.open("tdee-static-v2");
-    return cache.addAll(staticAssets);
+self.addEventListener('install', function(event) {
+    event.waitUntil(
+        caches.open('tdee-static-v2').then(function(cache) {
+            return cache.addAll(staticAssets);
+        })
+    );
 });
 
 self.addEventListener('fetch', function(event) {
@@ -44,8 +46,3 @@ self.addEventListener('activate',function (event) {
         })
     )
 });
-
-async function cacheFirst(req) {
-    const cachedResponse = await caches.match(req);
-    return cachedResponse || fetch(req);
-}
