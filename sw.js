@@ -2,6 +2,13 @@ const staticAssets = [
     "index.html",
     "result.html",
     "manifest.json",
+    "css/materialize.min.css",
+    "css/custom.css",
+    "images/*",
+    "js/materialize.js",
+    "js/script.js",
+    "js/scriptResults.js",
+    "jquery-3.1.0.min.js",
 ];
 
 self.addEventListener('install',async event =>{
