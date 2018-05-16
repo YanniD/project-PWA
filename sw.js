@@ -8,6 +8,7 @@ const staticAssets = [
     "js/script.js",
     "js/scriptResults.js",
     "jquery-3.1.0.min.js",
+    "images/*",
 ];
 
 self.addEventListener('install',async event =>{
