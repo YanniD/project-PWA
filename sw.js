@@ -1,8 +1,8 @@
 
 const staticAssets = [
-    "/index.html",
-    "/result.html",
-    "/manifest.json",
+    "index.html",
+    "result.html",
+    "manifest.json",
     "/css/materialize.min.css",
     "/css/custom.css",
     "https://fonts.googleapis.com/icon?family=Material+Icons",
