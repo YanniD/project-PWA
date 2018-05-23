@@ -1,3 +1,5 @@
+Online pagina  => https://yannid.github.io/project-PWA/
+
 Doordat ik geen back-end heb in mijn applicatie kan ik deze headers niet toevoegen. 
 
 Security headers
